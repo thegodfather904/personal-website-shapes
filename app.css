@@ -1,0 +1,60 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+html{
+  box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	box-sizing: inherit;
+}
+
+.large-block-section{
+  width: 100%;
+  height: 100vh;
+}
+
+.section-img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.grayscale{
+
+}
+
+.shape-container{
+  position: relative;
+  width: 550px;
+  margin: 0 auto;
+  padding-top: 340px;
+}
+
+.shape-title{
+  color: #fff;
+  font-size: 60px;
+  position: absolute;
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 400;
+  padding-top: 20px;
+}
+
+.shape{
+  width: 140px;
+  height: 130px;
+  border: 2px solid #fff;
+  border-radius: 100%;
+  margin-left: 189px;
+}
+
+#viewport .smoke {
+position: absolute;
+width: 250px;
+height: 250px;
+background:url('images/smoke-texture.png') no-repeat;
+bottom: 150px;
+margin-left:0px
+}

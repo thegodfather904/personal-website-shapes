@@ -2,9 +2,40 @@
 
 <html>
   <head>
+    <title>Tony Scialo</title>
+    <meta name = "viewport" content = "initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href = "app.css"/>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,500,700,300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
   </head>
 
   <body>
+    <section id = "viewport" class = "my-name-section large-block-section">
+      <img src = "images/DarkForest.jpg" class = "section-img grayscale"/>
+      <div class = "shape-container">
+        <div class = "shape-title">WHO IS TONY SCIALO ?</div>
+        <div class = "shape"/>
+      </div>
+    </section>
+    <section class = "web-development-section large-block-section">
+      <img src = "images/Skateboard.jpg" class = "section-img grayscale"/>
+    </section>
+
+
+
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+    <script src="http://demo.web3designs.com/jquery-easing.min.js"></script>
+    <script type="text/javascript">$(function(){
+    	if(!$.browser.msie){
+    		var a=0;for(;a<15;a+=1){setTimeout(function b(){var a=Math.random()*1e3+5e3,c=$("<div />",{"class":"smoke",css:{opacity:0,left:Math.random()*200+80}});$(c).appendTo("#viewport");$.when($(c).animate({opacity:1},{duration:a/4,easing:"linear",queue:false,complete:function(){$(c).animate({opacity:0},{duration:a/3,easing:"linear",queue:false})}}),$(c).animate({bottom:$("#viewport").height()},{duration:a,easing:"linear",queue:false})).then(function(){$(c).remove();b()})},Math.random()*3e3)}
+    	}else{
+    	"use strict";var a=0;for(;a<15;a+=1){setTimeout(function b(){var a=Math.random()*1e3+5e3,c=$("<div />",{"class":"smoke",css:{left:Math.random()*200+80}});$(c).appendTo("#viewport");$.when($(c).animate({},{duration:a/4,easing:"linear",queue:false,complete:function(){$(c).animate({},{duration:a/3,easing:"linear",queue:false})}}),$(c).animate({bottom:$("#viewport").height()},{duration:a,easing:"linear",queue:false})).then(function(){$(c).remove();b()})},Math.random()*3e3)}}}())
+      </script>
+
+
+
+
+
   </body>
 
 </html>
