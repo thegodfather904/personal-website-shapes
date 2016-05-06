@@ -11,6 +11,17 @@ html{
 	box-sizing: inherit;
 }
 
+/*CSS3 Animations*/
+
+@keyframes slow-zoom{
+  0%{transform: scale(1.0);}
+  100%{transform: scale(3.0);}
+}
+
+.hide-body-overflow{
+  overflow: hidden;
+}
+
 .large-block-section{
   width: 100%;
   height: 100vh;
@@ -22,15 +33,13 @@ html{
   position: absolute;
 }
 
-.grayscale{
-
-}
 
 .shape-container{
   position: relative;
   width: 550px;
   margin: 0 auto;
   padding-top: 340px;
+  z-index: 10;
 }
 
 .shape-title{
@@ -40,6 +49,7 @@ html{
   font-family: 'Shadows Into Light', cursive;
   font-weight: 400;
   padding-top: 20px;
+  z-index: -1;
 }
 
 .shape{
@@ -48,6 +58,28 @@ html{
   border: 2px solid #fff;
   border-radius: 100%;
   margin-left: 189px;
+  z-index: 12;
+  overflow: hidden;
+}
+
+.static-gif{
+  display: none;
+  margin-left: -56px;
+  margin-top: -11px;
+}
+
+
+.shape:hover{
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.shape:hover .static-gif{
+  display: block;
+}
+
+.forestZoom{
+    animation: slow-zoom 20s ease-in-out 1 forwards;
 }
 
 #viewport .smoke {
@@ -55,6 +87,6 @@ position: absolute;
 width: 250px;
 height: 250px;
 background:url('images/smoke-texture.png') no-repeat;
-bottom: 150px;
-margin-left:0px
+/*bottom: 150px;*/
+margin-left: 0;
 }
