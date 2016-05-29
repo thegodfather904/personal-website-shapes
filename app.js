@@ -5,13 +5,21 @@ $(function(){
   addShapeHover();
   addShapeClickEvent();
 
+  //createMovingStars();
+
 });
 
 
 function addShapeHover(){
   $('#shape').hover(
-       function(){ $('#forestImage').addClass('forestZoom') },
-       function(){ $('#forestImage').removeClass('forestZoom') }
+       function(){
+         $('#forestImage').addClass('forestZoom');
+         $('#shape').removeClass('shape-pulsate');
+       },
+       function(){
+         $('#forestImage').removeClass('forestZoom');
+         $('#shape').addClass('shape-pulsate');
+       }
   )
 }
 
@@ -36,10 +44,14 @@ function addShapeClickEvent(){
 
     //fade the forest
     forestImage.addClass('forestFade');
-
     $('#eyeGif').addClass('static-gif-clicked');
-
     $('#viewport').removeClass('show-smoke');
+
+    //fade eye and fade in new title
+    setTimeout(function(){
+      $('#viewport').fadeOut();
+      $('#alternateDimension').fadeIn();
+    }, 4500);
 
   })
 }
