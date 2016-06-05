@@ -3,11 +3,15 @@ var smokeMaker;
 $(function(){
   //makeSmoke();
   addShapeHover();
-  addShapeClickEvent();
-
+  addClickEvents();
   //createMovingStars();
 
 });
+
+function addClickEvents(){
+  addShapeClickEvent()
+  menuClick();
+}
 
 
 function addShapeHover(){
@@ -54,4 +58,22 @@ function addShapeClickEvent(){
     }, 4500);
 
   })
+}
+
+function menuClick(){
+  $('.menu-button').click(function(){
+
+    var menu = $('.menu');
+    var menuButton = $('.menu-button');
+
+    if(menuButton.hasClass('menu-button-open')){
+      menuButton.removeClass('menu-button-open');
+      menu.fadeOut();
+    }
+    else{
+      menuButton.addClass('menu-button-open');
+      menu.fadeIn();
+    }
+
+  });
 }
