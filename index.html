@@ -11,21 +11,14 @@
   </head>
 
   <body class = "hide-body-overflow">
-    <section id = "viewport" class = "my-name-section large-block-section show-smoke">
-      <img id = "forestImage" src = "images/DarkForest.jpg" class = "section-img forest-image"/>
-      <div class = "shape-container">
-        <div class = "shape-title">WHO IS <span>TONY</span> SCIALO ?</div>
-        <div id = "shape" class = "shape shape-pulsate">
-          <img id = "eyeGif" src = "images/WeirdEye2.gif" class = "static-gif"/>
-        </div>
-      </div>
-    </section>
-    <section id = "alternateDimension" class = "alternate-diminsion-section large-block-section">
+    <header class = "page-header">
       <div class = "menu-button">
         <span class = "horizontal-line horizontal-top-line"></span>
         <span class = "horizontal-line horizontal-middle-line"></span>
         <span class = "horizontal-line horizontal-bottom-line"></span>
       </div>
+    </header>
+    <nav class = "diminsion-navigation">
       <div class = "menu">
         <div class = "menu-inner">
           <div class = "box-outline-shadow"></div>
@@ -40,12 +33,35 @@
           </div>
         </div>
       </div>
-      <div class = "diminsion-title">
-        <span>Building the web</span><span>from an alternate diminsion</span>
+    </nav>
+    <section id = "viewport" class = "my-name-section large-block-section show-smoke">
+      <img id = "forestImage" src = "images/DarkForest.jpg" class = "section-img forest-image"/>
+      <div class = "shape-container">
+        <div class = "shape-title">WHO IS <span>TONY</span> SCIALO ?</div>
+        <div id = "shape" class = "shape shape-pulsate">
+          <img id = "eyeGif" src = "images/WeirdEye2.gif" class = "static-gif"/>
+        </div>
       </div>
     </section>
+    <main id = "mainPageContent" class = "main-page-content">
+      <section id = "alternateDimension" class = "alternate-diminsion-section large-block-section">
+        <div class = "diminsion-title">
+          <span>Building the web</span><span>from an alternate diminsion</span>
+        </div>
+      </section>
+      <section class = "skills-section large-block-section">
+        <div class = "planet-container">
+          <svg viewbox="-10 -1 30 12" class = "svg-test">
+            <path d="M-10 -1 H30 V12 H-10z M 5 5 m -5, 0 a 5,5 0 1,0 10,0 a 5,5 0 1,0 -10,0z"/>
+          </svg>
+          <div class = "planet">
+            <img src = "images/Geo-Pattern-1.jpg" class = "planet-image"/>
+          </div>
+        </div>
+      </section>
+    </main>
     <script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
-    <script src="http://demo.web3designs.com/jquery-easing.min.js"></script>
+    <!--<script src="http://demo.web3designs.com/jquery-easing.min.js"></script>-->
     <script src = "app.js"></script>
     <script src = "smoke.js"></script>
   </body>

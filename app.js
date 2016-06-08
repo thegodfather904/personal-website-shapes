@@ -54,8 +54,13 @@ function addShapeClickEvent(){
     //fade eye and fade in new title
     setTimeout(function(){
       $('#viewport').fadeOut();
-      $('#alternateDimension').fadeIn();
+      $('#mainPageContent').fadeIn();
+
+      //allow body overflow
+      $('body').removeClass('hide-body-overflow');
     }, 4500);
+
+
 
   })
 }
