@@ -342,13 +342,13 @@ html{
 }
 
 .planet{
-  width: 370px;
-  height: 370px;
+  width: 480px;
+  height: 480px;
   -webkit-animation: planet-rotation 20s linear infinite;
   animation: planet-rotation 20s linear infinite;
   position: absolute;
-  bottom: -13px;
-  margin-left: 30px
+  bottom: 13px;
+  margin-left: -147px
 }
 
 .planet-image{
@@ -356,10 +356,25 @@ html{
   height: 100%;
 }
 
+/*May need to remove*/
 .svg-test{
   position: absolute;
   bottom: 0;
   z-index: 2;
+}
+
+.planet-overlay{
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+}
+
+.planet-container-inner{
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  background-color: #000;
+  position: absolute;
 }
 
 #viewport .smoke {
