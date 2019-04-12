@@ -1,34 +1,32 @@
 var smokeMaker;
 
-$(function(){
-  //makeSmoke();
+$(function () {
+  makeSmoke();
   addShapeHover();
   addClickEvents();
-  //createMovingStars();
-
 });
 
-function addClickEvents(){
+function addClickEvents() {
   addShapeClickEvent()
   menuClick();
 }
 
 
-function addShapeHover(){
+function addShapeHover() {
   $('#shape').hover(
-       function(){
-         $('#forestImage').addClass('forestZoom');
-         $('#shape').removeClass('shape-pulsate');
-       },
-       function(){
-         $('#forestImage').removeClass('forestZoom');
-         $('#shape').addClass('shape-pulsate');
-       }
+    function () {
+      $('#forestImage').addClass('forestZoom');
+      $('#shape').removeClass('shape-pulsate');
+    },
+    function () {
+      $('#forestImage').removeClass('forestZoom');
+      $('#shape').addClass('shape-pulsate');
+    }
   )
 }
 
-function addShapeClickEvent(){
-  $('#shape').click(function(){
+function addShapeClickEvent() {
+  $('#shape').click(function () {
 
     stopSmoke();
 
@@ -39,11 +37,11 @@ function addShapeClickEvent(){
     var scaleX = element.getBoundingClientRect().width / element.offsetWidth;
 
     forestImage.css({
-      '-webkit-transform' : 'scale(' + scaleX + ')',
-      '-moz-transform'    : 'scale(' + scaleX + ')',
-      '-ms-transform'     : 'scale(' + scaleX + ')',
-      '-o-transform'      : 'scale(' + scaleX + ')',
-      'transform'         : 'scale(' + scaleX + ')'
+      '-webkit-transform': 'scale(' + scaleX + ')',
+      '-moz-transform': 'scale(' + scaleX + ')',
+      '-ms-transform': 'scale(' + scaleX + ')',
+      '-o-transform': 'scale(' + scaleX + ')',
+      'transform': 'scale(' + scaleX + ')'
     });
 
     //fade the forest
@@ -52,7 +50,7 @@ function addShapeClickEvent(){
     $('#viewport').removeClass('show-smoke');
 
     //fade eye and fade in new title
-    setTimeout(function(){
+    setTimeout(function () {
       $('#viewport').fadeOut();
       $('#mainPageContent').fadeIn();
 
@@ -65,17 +63,16 @@ function addShapeClickEvent(){
   })
 }
 
-function menuClick(){
-  $('.menu-button').click(function(){
+function menuClick() {
+  $('.menu-button').click(function () {
 
     var menu = $('.menu');
     var menuButton = $('.menu-button');
 
-    if(menuButton.hasClass('menu-button-open')){
+    if (menuButton.hasClass('menu-button-open')) {
       menuButton.removeClass('menu-button-open');
       menu.fadeOut();
-    }
-    else{
+    } else {
       menuButton.addClass('menu-button-open');
       menu.fadeIn();
     }
