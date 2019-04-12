@@ -1,16 +1,31 @@
 var smokeMaker;
 
 $(function () {
-  makeSmoke();
+  // makeSmoke();
   addShapeHover();
   addClickEvents();
 });
+
+function doSomething() {
+  $('#shape').addClass('eye-peek');
+  setTimeout(function () {
+    $('#shape').removeClass('eye-peek');
+  }, 200);
+}
+
+(function loop() {
+  var rand = Math.round(Math.random() * (10000 - 500)) + 500;
+  setTimeout(function () {
+    doSomething();
+    loop();
+  }, rand);
+}());
+
 
 function addClickEvents() {
   addShapeClickEvent()
   menuClick();
 }
-
 
 function addShapeHover() {
   $('#shape').hover(
@@ -57,9 +72,6 @@ function addShapeClickEvent() {
       //allow body overflow
       $('body').removeClass('hide-body-overflow');
     }, 4500);
-
-
-
   })
 }
 
