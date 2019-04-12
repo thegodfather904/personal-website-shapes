@@ -16,36 +16,6 @@ html {
 }
 
 /*CSS3 Animations*/
--o-keyframes slow-zoom {
-  0% {
-    transform: scale(1.0);
-  }
-
-  100% {
-    transform: scale(3.0);
-  }
-}
-
--moz-keyframes slow-zoom {
-  0% {
-    transform: scale(1.0);
-  }
-
-  100% {
-    transform: scale(3.0);
-  }
-}
-
--webkit-keyframes slow-zoom {
-  0% {
-    transform: scale(1.0);
-  }
-
-  100% {
-    transform: scale(3.0);
-  }
-}
-
 @keyframes slow-zoom {
   0% {
     transform: scale(1.0);
