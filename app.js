@@ -1,6 +1,6 @@
 var smokeMaker;
 
-$(function () {
+$(function() {
   // makeSmoke();
   addShapeHover();
   addClickEvents();
@@ -8,41 +8,40 @@ $(function () {
 
 function doSomething() {
   $('#shape').addClass('eye-peek');
-  setTimeout(function () {
+  var rand = Math.round(Math.random() * (500 - 50)) + 50;
+  setTimeout(function() {
     $('#shape').removeClass('eye-peek');
-  }, 200);
+  }, rand);
 }
 
 (function loop() {
   var rand = Math.round(Math.random() * (10000 - 500)) + 500;
-  setTimeout(function () {
+  setTimeout(function() {
     doSomething();
     loop();
   }, rand);
-}());
-
+})();
 
 function addClickEvents() {
-  addShapeClickEvent()
+  addShapeClickEvent();
   menuClick();
 }
 
 function addShapeHover() {
   $('#shape').hover(
-    function () {
+    function() {
       $('#forestImage').addClass('forestZoom');
       $('#shape').removeClass('shape-pulsate');
     },
-    function () {
+    function() {
       $('#forestImage').removeClass('forestZoom');
       $('#shape').addClass('shape-pulsate');
     }
-  )
+  );
 }
 
 function addShapeClickEvent() {
-  $('#shape').click(function () {
-
+  $('#shape').click(function() {
     stopSmoke();
 
     var forestImage = $('#forestImage');
@@ -56,7 +55,7 @@ function addShapeClickEvent() {
       '-moz-transform': 'scale(' + scaleX + ')',
       '-ms-transform': 'scale(' + scaleX + ')',
       '-o-transform': 'scale(' + scaleX + ')',
-      'transform': 'scale(' + scaleX + ')'
+      transform: 'scale(' + scaleX + ')'
     });
 
     //fade the forest
@@ -65,19 +64,18 @@ function addShapeClickEvent() {
     $('#viewport').removeClass('show-smoke');
 
     //fade eye and fade in new title
-    setTimeout(function () {
+    setTimeout(function() {
       $('#viewport').fadeOut();
       $('#mainPageContent').fadeIn();
 
       //allow body overflow
       $('body').removeClass('hide-body-overflow');
     }, 4500);
-  })
+  });
 }
 
 function menuClick() {
-  $('.menu-button').click(function () {
-
+  $('.menu-button').click(function() {
     var menu = $('.menu');
     var menuButton = $('.menu-button');
 
@@ -88,6 +86,5 @@ function menuClick() {
       menuButton.addClass('menu-button-open');
       menu.fadeIn();
     }
-
   });
 }
