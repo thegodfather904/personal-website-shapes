@@ -18,17 +18,17 @@ html {
 /*CSS3 Animations*/
 @keyframes slow-zoom {
   0% {
-    transform: scale(1.0);
+    transform: scale(1);
   }
 
   100% {
-    transform: scale(3.0);
+    transform: scale(3);
   }
 }
 
 @keyframes fade-out {
   0% {
-    opacity: 1.0;
+    opacity: 1;
   }
 
   100% {
@@ -49,7 +49,6 @@ html {
     transform: scale(0.9, 0.9);
   }
 }
-
 
 @-webkit-keyframes horizontal-move-down {
   0% {
@@ -143,7 +142,7 @@ html {
 
 .my-name-section {
   background-color: #000;
-  background-image: url("images/DarkForest.jpg");
+  background-image: url('images/DarkForest.jpg');
 }
 
 .large-block-section {
@@ -184,7 +183,6 @@ html {
   margin-left: 189px;
   z-index: 12;
   overflow: hidden;
-
 }
 
 .shape-pulsate {
@@ -197,7 +195,6 @@ html {
   margin-left: -56px;
   margin-top: -11px;
 }
-
 
 .shape:hover {
   background-color: #fff;
@@ -229,7 +226,7 @@ html {
 }
 
 .alternate-diminsion-section {
-  background-color: #2C1B3D;
+  background-color: #2c1b3d;
 }
 
 .diminsion-title {
@@ -255,7 +252,7 @@ html {
   width: 400px;
   height: 400px;
   position: absolute;
-  opacity: .5;
+  opacity: 0.5;
   -webkit-animation: menu-box-rotation-clockwise 1200ms forwards;
   animation: menu-box-rotation-clockwise 1200ms forwards;
 }
@@ -265,7 +262,7 @@ html {
   width: 400px;
   height: 400px;
   position: absolute;
-  background-color: #2C1B3D;
+  background-color: #2c1b3d;
   -webkit-animation: menu-box-rotation-counter 1200ms forwards;
   animation: menu-box-rotation-counter 1200ms forwards;
 }
@@ -274,12 +271,13 @@ html {
   border-left: 4px solid #2ecc71;
 }
 
-/*May need to remove*/
-.svg-test {
+.star-canvas {
   position: absolute;
-  bottom: 0;
-  z-index: 2;
+  width: 1500px;
+  height: 100vh;
 }
+
+/*May need to remove*/
 
 #viewport .smoke {
   position: absolute;
