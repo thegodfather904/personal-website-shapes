@@ -1,7 +1,7 @@
 var smokeMaker;
 
-$(function() {
-  // makeSmoke();
+$(function () {
+  makeSmoke();
   addShapeHover();
   addClickEvents();
 });
@@ -9,14 +9,14 @@ $(function() {
 function doSomething() {
   $('#shape').addClass('eye-peek');
   var rand = Math.round(Math.random() * (500 - 50)) + 50;
-  setTimeout(function() {
+  setTimeout(function () {
     $('#shape').removeClass('eye-peek');
   }, rand);
 }
 
 (function loop() {
   var rand = Math.round(Math.random() * (10000 - 500)) + 500;
-  setTimeout(function() {
+  setTimeout(function () {
     doSomething();
     loop();
   }, rand);
@@ -29,11 +29,11 @@ function addClickEvents() {
 
 function addShapeHover() {
   $('#shape').hover(
-    function() {
+    function () {
       $('#forestImage').addClass('forestZoom');
       $('#shape').removeClass('shape-pulsate');
     },
-    function() {
+    function () {
       $('#forestImage').removeClass('forestZoom');
       $('#shape').addClass('shape-pulsate');
     }
@@ -41,7 +41,7 @@ function addShapeHover() {
 }
 
 function addShapeClickEvent() {
-  $('#shape').click(function() {
+  $('#shape').click(function () {
     stopSmoke();
 
     var forestImage = $('#forestImage');
@@ -64,7 +64,7 @@ function addShapeClickEvent() {
     $('#viewport').removeClass('show-smoke');
 
     //fade eye and fade in new title
-    setTimeout(function() {
+    setTimeout(function () {
       $('#viewport').fadeOut();
       $('#mainPageContent').fadeIn();
 
@@ -75,7 +75,7 @@ function addShapeClickEvent() {
 }
 
 function menuClick() {
-  $('.menu-button').click(function() {
+  $('.menu-button').click(function () {
     var menu = $('.menu');
     var menuButton = $('.menu-button');
 
